@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<title>Hoja de vida </title>
+	
+	
+	<link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+
+	<!--Enlace para el .css de flexslider-->
+	<link rel="stylesheet" type="text/css" href="css/flexslider.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><!--este link actualiza automaticamente las versiones de jquery-->
+
+	<!--este comando carga jquery cuando el dispositivo no es ta conectado a internet.-->
+	<script>
+		!window.Jquery && document.write("<script src='js/jquery.min.js'><\/script>");
+	</script>
+	<!--Enlace para el .js de flexslider-->
+	<script src="js/jquery.flexslider.js"></script>
+
+	<script src="js/javaScript.js"></script>
+
+	<!-- este script ejecuta el flexslider, se crea un objeto window. este analiza hasta que window a cargado y ejecuta la función-->
+	<!-- $('.flexslider').flexslider(); los puntos indican que es una clase de html por eso .flexslider..este comando busca en el elemento que tenga la clase flexslider que en este caso es <div>de flexslider y ejecuta el metódo -->
+	<script>
+		$(window).on("load",function() {
+			
+			$('.flexslider').flexslider();
+		});
+	</script>
+
+	<!--Esta codigo de jQuery es el que me mueve el titulo hacía la derecha, y la foto de uds la aunmenta a 200px.. Fijensen que pueden mover cualquier cosa con este codigo solo tienen que especificar el id.. por ejemplo la imagen de hoja de vida en la linea 56 <img id="titulo" tiene un id con el nombre titulo. de igual forma pueden con cualquier etiqueta que tenga un id, pueden mover lo que sea solo agregandole el id. (busquen como animar con jquery) -->
+
+	<script type="text/javascript">
+          $(document).ready(function(){
+                    $('#titulo').animate({
+                               'margin-left':'800px'//con esto mueve la imagen ajusten el 800px
+                              
+
+                    },2000);//tiempo en milisegundos
+ 
+                     $('#yo').animate({
+                               'width':'250px',
+                               'height':'250',
+                               
+                    },1500)
+                    
+          });
+
+	</script>
+	
+</head>
+<body>
+<header>
+	<h1>
+		<a href="index.html">
+			<img id="titulo" class="fade" alt="hoja de vida" src="img/hoja.gif" />
+		</a>
+
+	</h1>
+	<br/>
+
+	<span id="fecha" class="fade">
+<script type="text/javascript">
+
+		document.write("Fecha:"+retornarFecha());
+  		document.write('<br>');
+  		document.write('La hora es:'+retornarHora());
+		</script>
+</span>
+
+</header>
+
+<section id="contenido">
+
+	<img id="diablito" src="img/diablito.gif" style=" position: fixed; left: 2px; top: 100px;  border=" target="_blank" rel="nofollow" alt="corazón">
+	
+<article id="descripcionHojaVida"> 
+	<h2>Datos Personales</h2>
+	<br></br>
+	<h1>Nombre:</h1>
+		<p>Fabian Andres Duran Santos</p>
+	<h1>Apellido:</h1>	
+		<p>Duran Santos</p>
+	<h1>Telefono:</h1>	
+		<p>301-777-2355</p>
+	<h1>Correo:</h1>
+		<a href="mailto:tú@tuemail.com"><p id="email">fabianduran@unisangil.edu.co</p>
+		</a>
+
+	<!--Linea horizontal para separar el texto-->
+	<hr />
+	<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+	<h2>Estudio realizados</h2>
+	<br></br>
+		<h1>Universidad Unisangil</h1>
+			<p>Ingeniero de sistemas
+			</p>
+		<h1>Instituto sena</h1>
+		<p>Ingles basico 1</p>
+</article>
+
+<article id="hojaVida">
+		<!-- Acá va la imgen de uds si quieren -->
+		<img id="yo"src="img/yo.jpg"alt="yo"/>
+
+			<!--Acá va todo lo de la librería flexslider, aquí es donde tienen que cambiar las imagenes por las que uds escojan. nada mas es modificar la etiqueta img src="img/slide-0.png"  el nombre slide-0.png por el nombre de su imagen y el formato que tenga jpg. gif.png--> 
+
+				<!--Ojo las imagenes deben de tener la misma dimensión para que se vean iguales-->
+				<div class="flexslider">
+				<ul class="slides">
+					<li><a href="https://www.facebook.com/"><img class="perros" src="img/p1.jpg"/></a>
+						<!--parrafo de descripción, esta debe tener la clase flex-caption-->
+						<p class="flex-caption">fabian.com | Esta es una prueba de guide project</p>
+					</li>
+					<li>
+						<img class="perros"src="img/p2.jpg"/>
+						<p class="flex-caption">Curso html5</p>
+					</li>
+					<li><img class="perros" src="img/perro3.jpg"/></li>
+					<li><a href="https://www.facebook.com/"><img class="perros" src="img/perro4.jpg"></a>
+						<p class="flex-caption">Curso de php</p>
+					</li>
+				</ul>
+			</div>
+	
+	
+</article>
+	</section>
+	
+<footer>Acá va mi nombre<A rel="author" HREF="https://www.facebook.com/" target="_blank"> @Nombre</A>
+	<br/>
+	<!--Si quieren la fecha acá abajo descomenten y quiten la de arriva del header-->
+
+<!--
+
+<span id="fecha" class="fade">
+<script type="text/javascript">
+
+		document.write("Fecha:"+retornarFecha());
+  		document.write('<br>');
+  		document.write('La hora es:'+retornarHora());
+		</script>
+</span>
+
+-->
+</footer><!-- publicidad y bot sociales..target="_blank abre el link en otra pestaña-->
+
+</body>
+<html/>
+
+

@@ -1,0 +1,177 @@
+/**reseteo universal*/
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+article, footer{
+	display: block;
+}
+#pie{
+	background: #F60;
+	background-size: 20px;
+}
+
+
+body{
+
+	background: #212121 url(../img/matrix.gif);/*Podemos agregar una imagen al body dado el caso que no se ejecute pues muestra el color #212121,, usar una imagen .gif como para dar mas dinamismo o una estatica como quieran*/
+	color: #FFF;/* color de la fuente*/
+	
+	font-size: 1em;/*100%*/
+	}
+/*enlaces*/
+a{
+	color: #57ABB8;
+	font-weight: bold;
+	text-decoration: none;/*quita la linea subrayada en los enlaces*/
+}
+a:hover{/*todos los enlaces cuando se para el mouse se pone un color naranja*/
+
+	color: #F60;
+}
+#diablito{
+	width: 80px;
+	height: 60px;
+}
+iframe, img{
+	max-width: 100%;
+	border-radius: 0.5em;
+	text-align:center;
+}
+/*#titulo{
+	width: 250px;
+	height: 200px;
+}*/
+#yo{
+	width: 190px;
+	height: 170px;
+}
+
+
+h2,h3{
+	color:#F90;
+	
+}
+h3{
+	background: #E2E7F1;
+	border-radius: 1em;
+	box-shadow:.25em .25em .25em rgba(255,153,0,.5); /*a los contenedores les da sombra-se puded aplicar a un artivle section..necesita 4 elemnetos 1 la distancia del elemetno2 distancia sobre el eje horizontal 3. cual es la intensidad 4. trasparencia*/
+	margin-bottom: .5em;/*margen hacía bajo */
+	
+}
+hr{
+	border: 1px dashed #FFF;/* dashed linea descontinua*/
+	margin: 1em 0;/*margen de 1em 0 pixeles a los lados*/
+}
+
+
+header, section#contenido, footer{
+	background: #FFF;
+	margin: 0 auto;
+	max-width: 90%;
+	text-align: center;
+}
+header h1{
+	display: inline-block;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+span{
+	background:#15A755;
+	font-size: 30px;
+	text-align: left; 
+	color: #F60;
+	border-radius: .5em;
+	box-shadow:.25em .25em .25em rgba(255,153,0,.5);
+	text-align: center;
+
+}
+
+
+article#descripcionHojaVida, article#hojaVida {
+
+	background: #15A755;
+	border-radius: 0.5em;
+	display: inline-block;
+	margin: 0 auto;
+	max-width: 100%;
+	min-height: 543px;
+	padding: 0.5em;
+	text-align: justify;
+	vertical-align: top;/*los nivela a la misma altura*/
+	width: 55%;/* A */
+	}
+	article#hojaVida{
+		text-align: center;
+		width: 40%;
+	}
+	
+
+footer{
+	color: #000;
+	font-size: 0.85em;
+	padding: 0.75em 0;
+}
+
+.fade{
+	opacity: 1;/*para cuando el mause pasa encima*/
+	filter:alpha(opacity=10);/*para internet explorer*/
+	-ms-transition: all 0.5s ease-in;/*ease-in aceleracion al princi´pio de efecto*/
+	-moz-transition: all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+	-webkit-transition: all 0.5s ease-in;
+	transition: all 0.5s ease-in;
+
+	
+
+}
+.fade:hover{
+	opacity: 0.7;
+	filter:alpha(opacity=7);/*para internet explorer*/
+	-ms-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+.imagen{
+	width: 600px;
+	height: 220px;
+}
+
+/*media query para el rwd */
+@media screen and (max-width: 1080px){
+	
+	
+	article#hojaVida{
+		width: 30%;
+	}
+}
+@media screen and (max-width: 1080px){
+		
+	article#hojaVida, article#descripcionHojaVida {
+		width: 45%;
+	}
+}
+@media screen and (max-width: 800px){
+	article#hojaVida{
+		width: 45%;
+	}
+	
+}
+/*tablet o smarphone*/
+@media screen and (max-width: 600px){
+	
+	article#descripcionHojaVida {
+		margin-bottom: 0.2em;/*evita que se pegue con lo de abajo- es un espacio de 2em---> nos da una separacion en la seccion acerca entre vision y la imagen-video*/
+	}
+	article#descripcionHojaVida, article#hojaVida{
+		display: block;
+		
+		width: 95%;
+	}
+	
+}
+/*--------------------------------------------------------------*/
